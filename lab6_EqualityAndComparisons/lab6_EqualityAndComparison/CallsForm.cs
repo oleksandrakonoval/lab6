@@ -5,14 +5,15 @@ using System.Threading;
 using System.Windows.Forms;
 
 namespace lab6_EqualityAndComparison {
-    public partial class Form1 : Form {
+    public partial class CallsForm : Form {
         ExampleContacts myContacts;
         bool lineIsBusy = false;
         Call currentCall=new Call();
         SortedSet<Call> Calls;
         Thread t;
+        SortedSet<CallGroup> CallGroups = new SortedSet<CallGroup>();
 
-        public Form1() {
+        public CallsForm() {
             InitializeComponent();
             button3.Enabled = false;
             button4.Enabled = false;
@@ -39,18 +40,21 @@ namespace lab6_EqualityAndComparison {
         }
 
         private void createCall() {
-          while (lineIsBusy==false)  {
-                Random rand = new Random();
-                int userIK = rand.Next(0, myContacts.ExampleContactList.Count);
-                int phoneIK = rand.Next(0, myContacts.ExampleContactList[userIK].phoneNumbers.Count);                
-                currentCall = new Call();
-                currentCall.ContactName = myContacts.ExampleContactList[userIK].name;
-                currentCall.CallDirection = (Direction)0;
-                currentCall.ContactNumber = myContacts.ExampleContactList[userIK].phoneNumbers[phoneIK];
-                currentCall.AddCallToLabel(label3);
-                currentCall.buttonEnablerChange(button1, true);                                
-                Thread.Sleep(5000);
-                }
+          while (true)  {
+                if (lineIsBusy==false) {
+                    Thread.Sleep(1000);
+                    Random rand = new Random();
+                    int userIK = rand.Next(0, myContacts.ExampleContactList.Count);
+                    int phoneIK = rand.Next(0, myContacts.ExampleContactList[userIK].phoneNumbers.Count);
+                    currentCall = new Call();
+                    currentCall.ContactName = myContacts.ExampleContactList[userIK].name;
+                    currentCall.CallDirection = (Direction)0;
+                    currentCall.ContactNumber = myContacts.ExampleContactList[userIK].phoneNumbers[phoneIK];
+                    currentCall.AddCallToLabel(label3);
+                    currentCall.buttonEnablerChange(button1, true);
+                    Thread.Sleep(5000);
+                }             
+            }
         }
 
         public Call createOutgoingCall(string name, string number) {
@@ -100,7 +104,16 @@ namespace lab6_EqualityAndComparison {
         }
 
         public void CallAdded(Call currentCall) {
-            currentCall.AddCallToListView(listView1);
+            if (Calls.Count == 0 || !currentCall.Equals(Calls.Min)) {
+                CallGroups.Add(new CallGroup(currentCall.ContactName, currentCall.ContactNumber, currentCall.CallDirection, currentCall.CallTime, currentCall));
+            }
+            else {
+                CallGroups.Min.lastCalllTime = currentCall.CallTime;
+                CallGroups.Min.addCallToGroup(currentCall);
+            }
+
+            currentCall.AddCallToListView(listView1); //to monitor separate calls
+            //CallGroups.Min.AddCallToListView(listView1); //to monitor groups of calls
             Calls.Add(currentCall);
             generateCalls();
         }
@@ -136,6 +149,10 @@ namespace lab6_EqualityAndComparison {
         }
 
         private void button2_Click(object sender, EventArgs e) {
+            lineIsBusy = false;
+
+            CallAdded(currentCall);
+
             currentCall.clearLabel(label3);
             Thread.Sleep(1000);
             generateCalls();

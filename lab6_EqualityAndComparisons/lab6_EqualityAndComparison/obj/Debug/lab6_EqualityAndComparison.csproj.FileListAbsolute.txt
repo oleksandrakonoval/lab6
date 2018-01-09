@@ -8,7 +8,7 @@ U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComp
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\bin\Debug\Messages.pdb
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\bin\Debug\UnderstandingOOP.pdb
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\lab6_EqualityAndComparison.csprojResolveAssemblyReference.cache
-U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\lab6_EqualityAndComparison.Form1.resources
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\lab6_EqualityAndComparison.CallsForm.resources
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\lab6_EqualityAndComparison.Properties.Resources.resources
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\lab6_EqualityAndComparison.csproj.GenerateResource.Cache
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\lab6_EqualityAndComparison.exe

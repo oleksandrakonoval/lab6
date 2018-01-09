@@ -55,5 +55,17 @@ U:\Training\C# Preparation\lab5\lab5_Threads_Tasks\SMSReceiverWFA\obj\Debug\SMSR
 U:\Training\C# Preparation\lab5\lab5_Threads_Tasks\SMSReceiverWFA\obj\Debug\SMSReceiverWFA.exe
 U:\Training\C# Preparation\lab5\lab5_Threads_Tasks\SMSReceiverWFA\obj\Debug\SMSReceiverWFA.pdb
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\bin\Debug\SMSReceiverWFA.exe.config
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\bin\Debug\SMSReceiverWFA.exe
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\bin\Debug\SMSReceiverWFA.pdb
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\bin\Debug\Messages.dll
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\bin\Debug\MobilePhoneClassLib.dll
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\bin\Debug\UnderstandingOOP.dll
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\bin\Debug\Messages.pdb
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\bin\Debug\UnderstandingOOP.pdb
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\bin\Debug\MobilePhoneClassLib.pdb
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\obj\Debug\SMSReceiverWFA.csprojResolveAssemblyReference.cache
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\obj\Debug\SimCorp.IMS.SMSReceiverWFA.SMSReceiverForm.resources
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\obj\Debug\SMSReceiverWFA.Properties.Resources.resources
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\obj\Debug\SMSReceiverWFA.csproj.GenerateResource.Cache
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\obj\Debug\SMSReceiverWFA.exe
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\SMSReceiverWFA\obj\Debug\SMSReceiverWFA.pdb

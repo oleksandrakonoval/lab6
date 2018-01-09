@@ -18,21 +18,21 @@ namespace lab6_EqualityAndComparison {
         public TimeSpan CallDuration { get; set; }
         public DateTime CallTime { get; set; }
 
-        public delegate void CallRecievedDelegate(Call myCall);
-
-        public event CallRecievedDelegate CallReceived;
-
-        public void RaiseCallReceivedEvent(Call myCall) {
-            CallReceived?.Invoke(myCall);
-        }
-
-        public void ReceiveCall() {
-            RaiseCallReceivedEvent(this);
-        }
-
         public int CompareTo(Call other) {
             if (other == null) return 1;
             return -CallTime.CompareTo(other.CallTime);
+        }
+
+        public override bool Equals(object obj) {
+            if (obj==null) {
+                return false;
+            }
+            Call previousCall=obj as Call;
+            return this == previousCall || (CallDirection == previousCall.CallDirection && ContactName == previousCall.ContactName && ContactNumber == previousCall.ContactNumber);
+        }
+
+        public override int GetHashCode() {
+            return base.GetHashCode();
         }
 
         public void AddCallToListView(ListView listview) {
