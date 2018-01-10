@@ -1,15 +1,9 @@
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\bin\Debug\lab6_EqualityAndComparison.exe.config
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\bin\Debug\lab6_EqualityAndComparison.exe
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\bin\Debug\lab6_EqualityAndComparison.pdb
-U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\bin\Debug\SMSReceiverWFA.exe
-U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\bin\Debug\Messages.dll
-U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\bin\Debug\UnderstandingOOP.dll
-U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\bin\Debug\SMSReceiverWFA.pdb
-U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\bin\Debug\Messages.pdb
-U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\bin\Debug\UnderstandingOOP.pdb
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\lab6_EqualityAndComparison.csprojResolveAssemblyReference.cache
-U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\lab6_EqualityAndComparison.CallsForm.resources
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\lab6_EqualityAndComparison.Properties.Resources.resources
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\lab6_EqualityAndComparison.csproj.GenerateResource.Cache
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\lab6_EqualityAndComparison.exe
 U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\lab6_EqualityAndComparison.pdb
+U:\Training\C# Preparation\lab6\lab6_EqualityAndComparisons\lab6_EqualityAndComparison\obj\Debug\SimCorp.IMS.Calls.CallsForm.resources

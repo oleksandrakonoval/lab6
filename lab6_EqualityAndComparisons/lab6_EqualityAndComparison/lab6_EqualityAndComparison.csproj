@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Call.cs" />
-    <Compile Include="CallGroup.cs" />
-    <Compile Include="Contact.cs" />
-    <Compile Include="ExampleContacts.cs" />
+    <Compile Include="PhoneBook\Call.cs" />
+    <Compile Include="PhoneBook\CallGroup.cs" />
+    <Compile Include="PhoneBook\Contact.cs" />
+    <Compile Include="PhoneBook\ExampleContacts.cs" />
     <Compile Include="CallsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,12 +82,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SMSReceiverWFA\SMSReceiverWFA.csproj">
-      <Project>{4890EEAF-30A5-4F7A-AD28-9A0AE63E1FD6}</Project>
-      <Name>SMSReceiverWFA</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

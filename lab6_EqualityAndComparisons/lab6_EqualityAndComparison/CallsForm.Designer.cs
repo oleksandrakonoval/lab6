@@ -1,4 +1,4 @@
-﻿namespace lab6_EqualityAndComparison {
+﻿namespace SimCorp.IMS.Calls {
     partial class CallsForm {
         /// <summary>
         /// Required designer variable.

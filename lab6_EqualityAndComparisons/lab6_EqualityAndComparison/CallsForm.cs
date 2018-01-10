@@ -1,10 +1,10 @@
-﻿using SimCorp.IMS.SMSReceiverWFA;
+﻿using SimCorp.IMS.PhoneBook.Calls;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace lab6_EqualityAndComparison {
+namespace SimCorp.IMS.Calls {
     public partial class CallsForm : Form {
         ExampleContacts myContacts;
         bool lineIsBusy = false;
@@ -49,6 +49,7 @@ namespace lab6_EqualityAndComparison {
                     currentCall = new Call();
                     currentCall.ContactName = myContacts.ExampleContactList[userIK].name;
                     currentCall.CallDirection = (Direction)0;
+                    currentCall.CallTime = DateTime.Now;
                     currentCall.ContactNumber = myContacts.ExampleContactList[userIK].phoneNumbers[phoneIK];
                     currentCall.AddCallToLabel(label3);
                     currentCall.buttonEnablerChange(button1, true);
@@ -76,6 +77,7 @@ namespace lab6_EqualityAndComparison {
             button5.Enabled = false;
 
             currentCall=createOutgoingCall(comboBox1.Text,comboBox2.Text);
+            label3.Text = "";
             label6.Text = currentCall.ToString();
         }
 
@@ -100,22 +102,21 @@ namespace lab6_EqualityAndComparison {
 
             currentCall.CallDuration = DateTime.Now.Subtract(currentCall.CallTime);
             CallAdded(currentCall);
-            generateCalls();
         }
 
         public void CallAdded(Call currentCall) {
             if (Calls.Count == 0 || !currentCall.Equals(Calls.Min)) {
-                CallGroups.Add(new CallGroup(currentCall.ContactName, currentCall.ContactNumber, currentCall.CallDirection, currentCall.CallTime, currentCall));
+                CallGroups.Add(new CallGroup(currentCall));
             }
             else {
-                CallGroups.Min.lastCalllTime = currentCall.CallTime;
+                CallGroups.Min.lastCallTime = currentCall.CallTime;
+                CallGroups.Min.lastCallDuration = currentCall.CallDuration;
                 CallGroups.Min.addCallToGroup(currentCall);
             }
 
-            currentCall.AddCallToListView(listView1); //to monitor separate calls
-            //CallGroups.Min.AddCallToListView(listView1); //to monitor groups of calls
+            //currentCall.AddCallToListView(listView1); //to monitor separate calls
+            CallGroups.Min.AddCallToListView(listView1); //to monitor groups of calls
             Calls.Add(currentCall);
-            generateCalls();
         }
 
         private void button1_Click(object sender, EventArgs e) {
@@ -145,17 +146,16 @@ namespace lab6_EqualityAndComparison {
 
             currentCall.CallDuration = DateTime.Now.Subtract(currentCall.CallTime);
             CallAdded(currentCall);
-            generateCalls();
         }
 
         private void button2_Click(object sender, EventArgs e) {
             lineIsBusy = false;
 
+
             CallAdded(currentCall);
 
             currentCall.clearLabel(label3);
             Thread.Sleep(1000);
-            generateCalls();
         }
     }
         
